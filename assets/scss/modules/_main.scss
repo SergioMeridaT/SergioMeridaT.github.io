@@ -1,0 +1,290 @@
+.parallax-window {
+    min-height: 100vh;
+    background: transparent;
+}
+/*First Section*/
+.portfolio {
+	&-main {
+		text-align: center;
+		color: #fff;
+		font-size: 30px;
+		font-family: 'Kaushan Script', cursive;
+		height: 100vh;
+		display: table;
+		width: 100%;
+		background-color: rgba(0,0,0,.6);
+	}
+	&-center {
+		display: table-cell;
+		vertical-align: middle;
+		p:first-child {
+			font-size: 50px;
+			margin-bottom: 5px;
+		}
+	}
+	&-scroll {
+		background: url('../img/scroll.svg') no-repeat center;
+		background-size: 30px 30px;
+		width: 30px;
+		height: 30px;
+		position: absolute;
+		left: 0;
+		right: 0;
+		bottom: 20px;
+		margin: auto;
+		cursor: pointer;
+		-moz-animation: bounce 2s infinite;
+		-webkit-animation: bounce 2s infinite;
+		animation: bounce 2s infinite;
+	}
+}
+
+/*Second Section*/
+.portfolio-info {
+	color: #4d4d4d;
+	text-align: center;
+	padding: 20px 0;
+	height: 400px;
+	display: table;
+	width: 100%;
+	&_txt {
+		display: table-cell;
+		vertical-align: middle;
+		h2 {
+			font-size: 42px;
+			font-family: 'Kaushan Script', cursive;
+		}
+		p {
+			font-size: 25px;
+			margin-top: 20px;
+		}
+	}
+}
+
+
+/*Third Section*/
+.portfolio-title{
+	color: #4d4d4d;
+	font-size: 42px;
+	text-align: center;
+	margin: 30px 0;
+	font-family: 'Kaushan Script', cursive
+}
+.portfolio-wrapper{
+    border-top: 1px solid rgba(0,0,0,.2);
+	.skills-bar-container {
+		position: relative;
+		width: 100%;
+		list-style-type: none;
+		li {
+			width: 100%;
+			margin-bottom: 20px;
+			.progressbar-title {
+				color: #4d4d4d;
+				margin-bottom: 5px;
+				h3 {
+					display: inline-block;
+				}
+				.percent {
+					position: absolute;
+					right: 20px;
+					font-size: 1.1em;
+				}
+			}
+			.bar-container {
+				background: #ececec;
+				position: relative;
+				width: 100%;
+				height: 10px;
+				.progressbar{
+					background: #34495e;
+					position:absolute;
+					width:0%;
+					height: 100%;
+				}
+			}
+		}
+	}
+}
+
+/*Fourth Section*/
+.portfolio-division {
+	border-top: 1px solid rgba(0,0,0,0.2);
+	margin-top: 100px;
+}
+.portfolio-project {
+	width:100%;
+	margin-bottom: 30px;
+	border-radius: 6px;
+	-webkit-box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.2);
+	-moz-box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.2);
+	box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.2);
+	&_image {
+		width: 100%;
+		height: 300px;
+		background-color: rgba(0,0,0,.2);
+		overflow: hidden;
+		-webkit-transform-style: preserve-3d;
+		-moz-transform-style: preserve-3d;
+		transform-style: preserve-3d;
+		&__cover {
+			position: absolute;
+			top: -50%;
+			left: -50%;
+			width: 200%;
+			height: 200%;
+			img {
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				margin: auto;
+				min-width: 50%;
+				min-height: 50%;
+				width: 50%;
+				height: auto;
+				overflow: hidden;
+				border-top-left-radius: 5px;
+				border-top-right-radius: 5px;
+			}
+		}
+		
+	}
+	&_info {
+		padding: 20px;
+		text-align: center;
+		border-top: 1px solid rgba(0,0,0,.1);
+		&_title {
+			font-size: 25px;
+		}
+		&_uses {
+			font-size: 18px;
+			margin-top: 10px;
+		}
+	}
+}
+
+
+#ajax-contact input {
+    height: 50px;
+    border: 0;
+    padding: 0 30px 0 15px;
+    margin: 15px 0 0;
+    width: 100%;
+    font-size: 14px;
+    font-weight: 300;
+    border-radius: 4px;
+    background-color: transparent;
+    color: #4d4d4d;
+    outline: none;
+    border: 1px solid rgba(0,0,0,0.2);
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    -webkit-transition: all 300ms ease;
+    -khtml-transition: all 300ms ease;
+    -moz-transition: all 300ms ease;
+    -ms-transition: all 300ms ease;
+    -o-transition: all 300ms ease;
+    transition: all 300ms ease;
+}
+
+#ajax-contact textarea {
+    height: 115px;
+    border: 0;
+    padding: 15px 30px 15px 15px;
+    margin: 15px 0 0;
+    width: 100%;
+    font-size: 14px;
+    font-weight: 300;
+    font-family: $roboto;
+    border-radius: 4px;
+    background-color: transparent;
+    color: #4d4d4d;
+    outline: none;
+    border: 1px solid rgba(0,0,0,0.2);
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    -webkit-transition: all 300ms ease;
+    -khtml-transition: all 300ms ease;
+    -moz-transition: all 300ms ease;
+    -ms-transition: all 300ms ease;
+    -o-transition: all 300ms ease;
+    transition: all 300ms ease;
+}
+
+#ajax-contact .input_placeholder {
+    font-size: 12px;
+    font-weight: 400;
+    color: #949494;
+    margin-left: 0px;
+    opacity: 0;
+    position: absolute;
+    top: 23px;
+    left: 15px;
+    z-index: 1;
+    -webkit-transition: opacity 300ms ease;
+    -khtml-transition: opacity 300ms ease;
+    -moz-transition: opacity 300ms ease;
+    -ms-transition: opacity 300ms ease;
+    -o-transition: opacity 300ms ease;
+    transition: opacity 300ms ease;
+}
+
+#ajax-contact .inputActive .input_placeholder, #ajax-contact .inputWhite .input_placeholder {
+    opacity: 1;
+    -webkit-transition: opacity 300ms ease 150ms;
+    -khtml-transition: opacity 300ms ease 150ms;
+    -moz-transition: opacity 300ms ease 150ms;
+    -ms-transition: opacity 300ms ease 150ms;
+    -o-transition: opacity 300ms ease 150ms;
+    transition: opacity 300ms ease 150ms;
+}
+
+#ajax-contact .inputActive input, #ajax-contact .inputWhite input {
+    padding: 15px 30px 0px 15px;
+}
+
+.button_post {
+	background: #43b6fa;
+    background: -moz-linear-gradient(top, #43b6fa 0%, #4597c7 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #43b6fa), color-stop(100%, #4597c7));
+    background: -webkit-linear-gradient(top, #43b6fa 0%, #4597c7 100%);
+    background: -o-linear-gradient(top, #43b6fa 0%, #4597c7 100%);
+    background: -ms-linear-gradient(top, #43b6fa 0%, #4597c7 100%);
+    background: linear-gradient(to bottom, #43b6fa 0%, #4597c7 100%);
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    display: block;
+    min-height: 40px;
+    line-height: 1.2em;
+    border: 0;
+    outline: 0;
+    color: #fff;
+    font-size: 16px;
+    text-align: center;
+    padding: 9px 20px;
+    font-weight: 400;
+    text-decoration: none;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.3);
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-box-shadow: inset 0 0 1px rgba(0,0,0,0.6), 0 2px 6px rgba(0,0,0,0.1);
+    -moz-box-shadow: inset 0 0 1px rgba(0,0,0,0.6),0 2px 6px rgba(0,0,0,0.1);
+    -o-box-shadow: inset 0 0 1px rgba(0,0,0,0.6),0 2px 6px rgba(0,0,0,0.1);
+    -ms-box-shadow: inset 0 0 1px rgba(0,0,0,0.6),0 2px 6px rgba(0,0,0,0.1);
+    box-shadow: inset 0 0 1px rgba(0,0,0,0.6), 0 2px 6px rgba(0,0,0,0.1);
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -o-border-radius: 4px;
+    -ms-border-radius: 4px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 20px auto;
+}

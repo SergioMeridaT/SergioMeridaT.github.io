@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<title>Portfolio</title>
+	<!-- METAS -->
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<meta name="revisit-after" content="5 days">
+	<meta name="Content-Language" content="en-us,english">
+	<meta http-equiv="X-UA-Compatible" content="IE=10">
+	<!-- LINKS -->
+	<link href="https://fonts.googleapis.com/css?family=Kaushan+Script|Roboto" rel="stylesheet">
+	<link type="text/css" rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+
+	<!--Navbar start-->
+	<nav class="portfolio-navbar">
+		<div class="container">
+			<div class="portfolio-navlogo"></div>
+		</div>
+	</nav>
+	<!--Navbar end-->
+
+	<!--Main Container start-->
+	<main>
+		<!--First Section-->
+		<div class="parallax-window" data-parallax="scroll" data-image-src="assets/img/compu.jpg">
+			<div class="portfolio-main">
+				<div class="portfolio-center">
+					<p>Sergio Merida</p>
+					<p>Web Developer</p>
+				</div>
+				<div class="portfolio-scroll"></div>
+			</div>
+		</div>
+		<!--First Section-->
+
+		<!--Second Section-->
+		<div class="container">
+			<div class="portfolio-info">
+				<div class="portfolio-info_txt">
+					<h2>Hi!</h2>
+					<p>My name is Sergio Merida and I'm a web developer with an eye for design, UX and UI development and a strong desire to learn and create.</p>
+				</div>
+			</div>
+		</div>
+		<!--Second Section-->
+
+		<!--Third Section-->
+		<div class="container">
+			<div class="portfolio-wrapper">
+				<h2 class="portfolio-title">Development</h2>
+				<ul class="skills-bar-container">
+					<li>
+						<div class="progressbar-title">
+							<h3>HTML5</h3>
+							<span class="percent" id="html-pourcent"></span>
+						</div>
+						<div class="bar-container" data-percent="95">
+							<span class="progressbar" id="progress-html"></span>
+						</div>
+					</li>
+					<li>
+						<div class="progressbar-title">
+							<h3>CSS / SCSS</h3>
+							<span class="percent" id="css-pourcent"></span>
+						</div>
+						<div class="bar-container" data-percent="88">
+							<span class="progressbar" id="progress-css"></span>
+						</div>
+					</li>
+					<li>
+						<div class="progressbar-title">
+							<h3>JavaScript / jQuery</h3>
+							<span class="percent" id="javascript-pourcent"></span>
+						</div>
+						<div class="bar-container" data-percent="83">
+							<span class="progressbar" id="progress-javascript"></span>
+						</div>
+					</li>
+					<li>
+						<div class="progressbar-title">
+							<h3>PHP</h3>
+							<span class="percent" id="php-pourcent"></span>
+						</div>
+						<div class="bar-container" data-percent="40">
+							<span class="progressbar" id="progress-php"></span>
+						</div>
+					</li>
+					<li>
+						<div class="progressbar-title">
+							<h3>Gulp</h3>
+							<span class="percent" id="angular-pourcent"></span>
+						</div>
+						<div class="bar-container" data-percent="70">
+							<span class="progressbar" id="progress-angular"></span>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!--Third Section-->
+
+		<!--Fourth Section-->
+		<div class="container">
+			<div class="portfolio-division">
+				<h2 class="portfolio-title">Projects</h2>
+				<div class="row">
+					<div class="col-lg-6">
+						<div class="portfolio-project">
+							<div class="portfolio-project_image">
+								<div class="portfolio-project_image__cover">
+									<img src="assets/img/project.png" alt="Project 1" />
+								</div>
+							</div>
+							<div class="portfolio-project_info">
+								<p class="portfolio-project_info_title">Asociacion Renacimiento</p>
+								<p class="portfolio-project_info_uses">Uses: Wordpress, Javascript, Jquery, Bootstrap</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-6">
+						<div class="portfolio-project">
+							<div class="portfolio-project_image">
+								<div class="portfolio-project_image__cover">
+									<img src="assets/img/project2.png" alt="Project 1" />
+								</div>
+							</div>
+							<div class="portfolio-project_info">
+								<p class="portfolio-project_info_title">El Cafecito</p>
+								<p class="portfolio-project_info_uses">Uses: Javascript, Jquery, Bootstrap</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-6">
+						<div class="portfolio-project">
+							<div class="portfolio-project_image">
+								<div class="portfolio-project_image__cover">
+									<img src="assets/img/project3.png" alt="Project 1" />
+								</div>
+							</div>
+							<div class="portfolio-project_info">
+								<p class="portfolio-project_info_title">Guatevoz</p>
+								<p class="portfolio-project_info_uses">Uses: Javascript, Jquery, Bootstrap</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-6">
+						<div class="portfolio-project">
+							<div class="portfolio-project_image">
+								<div class="portfolio-project_image__cover">
+									<img src="assets/img/project4.png" alt="Project 1" />
+								</div>
+							</div>
+							<div class="portfolio-project_info">
+								<p class="portfolio-project_info_title">Pase de gol</p>
+								<p class="portfolio-project_info_uses">Uses: Wordpress, Javascript, Jquery, Bootstrap</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--Fourth Section-->
+
+		<!--Contact-->
+		<div class="container">
+			<div class="row">
+				<div id="form-messages"></div>
+				<form id="ajax-contact" method="post" action="assets/js/mailer.php">
+					<div class="portfolio-division">
+						<h2 class="portfolio-title">Get in touch</h2>
+						<div class="col-lg-6">
+							<div id="nameRow" class="inner__row">
+								<div class="inner__column">
+									<div class="input_placeholder">Your Name</div>
+									<input type="text" id="name" name="name" placeholder="Your Name" required>
+								</div>
+							</div>
+							<div id="nameRow" class="inner__row">
+								<div class="inner__column">
+									<div class="input_placeholder">Your Email</div>
+									<input type="email" id="email" name="email" placeholder="Your Email" required>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-6">
+							<div id="nameRow" class="inner__row">
+								<div class="inner__column">
+									<textarea placeholder="Your Message" id="message" name="message" required></textarea>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-12">
+							<button type="submit" class="button_post">
+								<span>Send Message</span>
+							</button>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+		<!--Contact-->
+
+	</main>
+	<!--Main Container end-->
+
+	<!--Footer start
+	<footer class="cs_footer">
+		<div class="container">
+			<div class="row">
+			</div>
+		</div>
+	</footer>
+	<!--Footer end-->
+
+	<script type="text/javascript" src="assets/js/libs/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src='assets/js/libs/parallax.min.js'></script>
+	<script type="text/javascript" src='assets/js/main.js'></script>
+	<script type="text/javascript" src="assets/js/app.js"></script>
+
+</body>
+</html>

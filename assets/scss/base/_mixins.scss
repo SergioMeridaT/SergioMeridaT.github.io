@@ -1,0 +1,199 @@
+@mixin bgLayer($urlImage) {
+	background-image: url($urlImage);
+	background-position: top;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+@mixin normalBg($urlImage) {
+	background-image: url($urlImage);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+@mixin bgLinearGradient($bgFirst, $stopFirst, $bgSecond, $stopSecond) {
+	background-color: $bgFirst;
+	background-image:-webkit-gradient(linear, left bottom, left top, color-stop($stopSecond, $bgSecond) color-stop($stopFirst, $bgFirst));
+	background-image: -webkit-linear-gradient($bgSecond, $bgFirst);
+	background-image: -moz-linear-gradient(top,$bgSecond, $bgFirst);
+	background-image: -ms-linear-gradient($bgSecond, $bgFirst);
+	background-image: -o-linear-gradient($bgSecond, $bgFirst);
+	background-image: linear-gradient($bgSecond, $bgFirst);
+}
+
+@mixin bgLinearGradientIE($bgColorIE, $bgFirst, $stopFirst, $bgSecond, $stopSecond) {
+	background-color: $bgColorIE;
+	background-image:-webkit-gradient(linear, left bottom, left top, color-stop($stopSecond, $bgSecond) color-stop($stopFirst, $bgFirst));
+	background-image: -webkit-linear-gradient($bgSecond, $bgFirst);
+	background-image: -moz-linear-gradient(top,$bgSecond, $bgFirst);
+	background-image: -ms-linear-gradient($bgSecond, $bgFirst);
+	background-image: -o-linear-gradient($bgSecond, $bgFirst);
+	background-image: linear-gradient($bgSecond, $bgFirst);
+}
+
+@mixin bgOverlay($bgFirst, $stopFirst, $bgSecond, $stopSecond) {
+	background: $bgFirst; /* Old browsers */
+	background: -moz-linear-gradient(left,  $bgFirst $stopFirst, $bgSecond $stopSecond); /* FF3.6-15 */
+	background: -webkit-linear-gradient(left,  $bgFirst $stopFirst,$bgSecond $stopSecond); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to right,  $bgFirst $stopFirst,$bgSecond $stopSecond); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr= $bgFirst, endColorstr= $bgSecond,GradientType=0 ); /* IE6-9 */
+}
+
+@mixin bgSize($urlImage, $size) {
+	background: url($urlImage);
+	background-size: $size;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+@mixin transitions( $parameters: all ) {
+	-webkit-transition: #{$parameters};
+	-moz-transition: #{$parameters};
+	-ms-transition: #{$parameters};
+	-o-transition: #{$parameters};
+	transition: #{$parameters};
+}
+
+@mixin userSelect($parameter) {
+	-webkit-touch-callout: $parameter;
+	-webkit-user-select: $parameter;
+	-khtml-user-select: $parameter;
+	-moz-user-select: $parameter;
+	-ms-user-select: $parameter;
+	user-select: $parameter;
+}
+
+@mixin borderRadius($radius) {
+	-webkit-border-radius: $radius;
+	-moz-border-radius: $radius;
+	-o-border-radius: $radius;
+	-ms-border-radius: $radius;
+	border-radius: $radius;
+}
+
+@mixin boxShadow($shadow) {
+	-webkit-box-shadow: $shadow;
+	-moz-box-shadow: $shadow;
+	-o-box-shadow: $shadow;
+	-ms-box-shadow: $shadow;
+	box-shadow: $shadow;
+}
+
+@mixin boxShadowT($shadowO, $shadowT, $shadowTh) {
+	-webkit-box-shadow: $shadowO, $shadowT, $shadowTh;
+	-moz-box-shadow: $shadowO, $shadowT, $shadowTh;
+	-o-box-shadow: $shadowO, $shadowT, $shadowTh;
+	-ms-box-shadow: $shadowO, $shadowT, $shadowTh;
+	box-shadow: $shadowO, $shadowT, $shadowTh;
+}
+
+@mixin text-shadow($horizOffset, $vertOffset, $blur, $color) {
+	-webkit-text-shadow: $horizOffset $vertOffset $blur $color;
+	-moz-text-shadow: $horizOffset $vertOffset $blur $color;
+	-ms-text-shadow: $horizOffset $vertOffset $blur $color; /* IE 10+ */
+	-o-text-shadow: $horizOffset $vertOffset $blur $color;
+	text-shadow: $horizOffset $vertOffset $blur $color;
+}
+
+@mixin transformTranslate($param1, $param1) {
+	-webkit-transform: translate($param1, $param1);
+	-moz-transform: translate($param1, $param1);
+	-o-transform: translate($param1, $param1);
+	-ms-transform: translate($param1, $param1);
+	transform: translate($param1, $param1);
+}
+
+@mixin transformTranslateY($param) {
+	-webkit-transform: translateY($param);
+	-moz-transform: translateY($param);
+	-o-transform: translateY($param);
+	-ms-transform: translateY($param);
+	transform: translateY($param);
+}
+
+@mixin animations($count, $duration, $name) {
+	-webkit-animation-iteration-count: $count;
+	-webkit-animation-duration: $duration;
+	-webkit-animation-name: $name;
+	-moz-animation-iteration-count: $count;
+	-moz-animation-duration: $duration;
+	-moz-animation-name: $name;
+	-o-animation-iteration-count: $count;
+	-o-animation-duration: $duration;
+	-o-animation-name: $name;
+	-ms-animation-iteration-count: $count;
+	-ms-animation-duration: $duration;
+	-ms-animation-name: $name;
+	animation-duration: $duration;
+	animation-name: $name;
+	animation-iteration-count: $count;
+}
+
+@mixin transitionTiming($param) {
+	-webkit-transition-timing-function: $param;
+	-webkit-transition-timing-function: $param;
+	-moz-transition-timing-function: $param;
+	-ms-transition-timing-function: $param;
+	-o-transition-timing-function: $param;
+	transition-timing-function: $param;
+}
+
+//Media Queries
+@mixin mobile( $orientation: all ) {
+	@if $orientation == all {
+		@media ( min-width: #{$mobile} ) and ( max-width: #{$tablet - 1px} ) {
+			@content;
+		}
+	} @else {
+		@media ( min-width: #{$mobile} ) and ( max-width: #{$tablet - 1px} ) and ( orientation: $orientation ) {
+			@content;
+		}
+	}
+}
+@mixin tablet( $orientation: all ) {
+	@if $orientation == all {
+		@media ( min-width: #{$tablet} ) and ( max-width: #{$desktop - 1px} ) {
+			@content;
+		}
+	} @else {
+		@media ( min-width: #{$tablet} ) and ( max-width: #{$desktop - 1px} ) and ( orientation: $orientation ) {
+			@content;
+		}
+	}
+}
+@mixin desktop {
+	@media ( min-width: #{$desktop} ) {
+		@content;
+	}
+}
+
+@mixin mediaQ( $size ) {
+	@media ( max-width: #{$size} ) {
+		@content;
+	}
+}
+
+@mixin retina {
+	@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
+		@content;
+	}
+}
+
+@mixin keyframes($name) {
+	@-webkit-keyframes #{$name} {
+		@content;
+	}
+	@-moz-keyframes #{$name} {
+		@content;
+	}
+	@-ms-keyframes #{$name} {
+		@content;
+	}
+	@-o-keyframes #{$name} {
+		@content;
+	}
+	@keyframes #{$name} {
+		@content;
+	}
+}

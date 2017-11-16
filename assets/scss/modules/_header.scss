@@ -1,0 +1,22 @@
+.portfolio {
+	&-navbar {
+		height: 70px;
+		position: fixed;
+		width: 100%;
+		z-index: 1;
+		.container {
+			height: 70px;
+		}
+	}
+	&-navlogo {
+		width: 50px;
+		height: 50px;
+		border: 1px solid #fff;
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		margin: auto;
+		background: url('../img/logo.svg') no-repeat center;
+		background-size: 50px 50px;
+	}
+}

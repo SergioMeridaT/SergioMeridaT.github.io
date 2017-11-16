@@ -1,0 +1,38 @@
+//Global settings
+html * {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	position: relative;
+}
+body {
+	color: #000;
+	font-family: 'Roboto', sans-serif;
+	font-size: 90%;
+	font-weight: 300;
+	height: 100%;
+	background-color: #f9f9fa;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+	@extend %selectElement;
+}
+ 
+input {
+	//Remove default styles validation Firefox & IE
+	&:required 		{box-shadow:none;}
+	&:invalid 		{box-shadow:none;}
+	&::-ms-clear 	{display: none;}
+	//PlaceHolder
+	&::-webkit-input-placeholder 	{color: #999999;}
+	&:-moz-placeholder 				{color: #999999;opacity: 1;}/* Firefox 18- */
+	&::-moz-placeholder 			{color: #999999;opacity: 1;}/* Firefox 19+ */
+	&:-ms-input-placeholder 		{color: #999999;}
+}
+
+.padOut {padding: 0;}
+.padOutM {@media screen and (max-width: 991px){padding:0}}
+.padOutLeft {
+	padding-left: 0;
+	@media screen and (max-width: 1199px){padding-left: 15px;}
+}
+.padOutRight {padding-right: 0;}
