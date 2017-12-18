@@ -4,6 +4,7 @@
 		position: fixed;
 		width: 100%;
 		z-index: 1;
+		border: 1px solid rgba(0,0,0,0);
 		.container {
 			height: 70px;
 		}
@@ -19,4 +20,9 @@
 		background: url('../img/logo.svg') no-repeat center;
 		background-size: 50px 50px;
 	}
+}
+
+.navActive {
+	background-color: #F9F9FA;
+	border: 1px solid rgba(0,0,0,.1);
 }

@@ -36,6 +36,25 @@ $( document ).ready(function() {
 			});
 	};
 
+	var triggerHeader = $('#mainContainer').offset();
+	var headerFlag = false;
+
+	function headerResize() {
+		var scrollPosHeader = $(window).scrollTop();
+
+		if(scrollPosHeader >= triggerHeader.top) {
+			$('.portfolio-navbar').addClass('navActive');
+			headerFlag = true;
+		} else {
+			$('.portfolio-navbar').removeClass('navActive');
+		}
+	}
+
+	headerResize();
+	$(window).scroll(function() {
+		headerResize();
+	});
+
 	function sendMail() {
 		var link = "mailto:tabarinisergio@gmail.com"
 				 + "?cc=" + escape(document.getElementById('email').value)
@@ -43,7 +62,7 @@ $( document ).ready(function() {
 				 + "&body=" + escape(document.getElementById('message').value)
 		;
 		window.location.href = link;
-	}
+	};
 
 	$("#sendEmail").click(function(e) {
 		e.preventDefault();
