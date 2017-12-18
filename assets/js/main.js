@@ -36,12 +36,23 @@ $( document ).ready(function() {
 			});
 	};
 
+	function sendMail() {
+		var link = "mailto:tabarinisergio@gmail.com"
+				 + "?cc=" + escape(document.getElementById('email').value)
+				 + "&subject=" + escape("Informacion sobre freelance " + escape(document.getElementById('name').value))
+				 + "&body=" + escape(document.getElementById('message').value)
+		;
+		window.location.href = link;
+	}
+
+	$("#sendEmail").click(function(e) {
+		e.preventDefault();
+		sendMail();
+	});
+
 	checkInputs();
 
-	console.log("test");
 	$('.skills-bar-container li').each( function(){
-		console.log("each");
-
 		var $barContainer = $(this).find('.bar-container');
 		var dataPercent = parseInt($barContainer.data('percent'));
 		var elem = $(this).find('.progressbar');

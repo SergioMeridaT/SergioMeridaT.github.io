@@ -4,6 +4,7 @@
     // Added input sanitizing to prevent injection
 
     // Only process POST reqeusts.
+    echo "test php";
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // Get the form fields and remove whitespace.
         $name = strip_tags(trim($_POST["name"]));
@@ -34,16 +35,10 @@
         // Build the email headers.
         $email_headers = "From: $name <$email>";
 
-        // Send the email.
-        if (mail($recipient, $subject, $email_content, $email_headers)) {
-            // Set a 200 (okay) response code.
-            http_response_code(200);
-            echo "Thank You! Your message has been sent.";
-        } else {
-            // Set a 500 (internal server error) response code.
-            http_response_code(500);
-            echo "Oops! Something went wrong and we couldn't send your message.";
-        }
+        echo $recipient, ' ', $subject, ' ', $email_content, ' ', $email_headers;
+
+        mail($recipient, $subject, $email_content, $email_headers);
+
 
     } else {
         // Not a POST request, set a 403 (forbidden) response code.
